@@ -385,7 +385,7 @@ article .icon{
     border-color: rgb(163, 163, 163);
 }
 
-.project-btn:hoover{
+.project-btn:hover{
     color: darkslategray;
     border-color: rgb(163, 163, 163);
 }
