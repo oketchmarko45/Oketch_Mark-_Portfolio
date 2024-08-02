@@ -28,7 +28,7 @@
     }
     section,
     .section-container{
-        height: fit-content;
+        height: auto;
     }
     section{
         margin: 0 5%;
@@ -56,7 +56,7 @@
         font-size: 3rem;
     }
     footer nav{
-        height: fit-content;
+        height: auto;
         margin-bottom: 2rem;
     }
     .about-containers,
