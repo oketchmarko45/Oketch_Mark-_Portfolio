@@ -1,394 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oketch Mark Portfolio </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ochieng Mark Oketch | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset to prevent inheritance from other pages */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    
+    /* Unique container for this page */
+    .portfolio-page-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Animated X element */
+    .animated-x {
+      position: fixed;
+      font-size: 36px; /* Increased size */
+      color: #006633; /* Changed color */
+      opacity: 0.7; /* Adjusted opacity */
+      transition: all 0.1s linear;
+      pointer-events: auto; /* Enable pointer events */
+      z-index: 1000;
+      cursor: pointer; /* Change cursor to pointer */
+    }
+    
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    
+    .social-links a {
+      flex: 1 1 calc(25% - 10px);
+      min-width: 150px;
+      text-align: center;
+      padding: 12px 15px;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      font-size: 15px;
+    }
+    
+    .social-links a:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    
+    .contact-item i {
+      margin-right: 8px;
+      width: 20px;
+      text-align: center;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .social-links a {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .social-links a {
+        flex: 1 1 100%;
+      }
+      .profile-section {
+        flex-direction: column;
+      }
+      .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
+  
 <body>
 
-<nav id="desktop-nav">
-        <div class="logo">Oketch Mark </div>
-        <div>
-            <ul class="nav-link">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contacts">Contact</a></li>
-            </ul>
-        </div>
-</nav>
+<!-- Animated X element -->
+<div class="animated-x" title="Return to Home">✕</div>
+  
+<div class="portfolio-page-container">
 
-<nav id="hamburger-nav">
-            <div class="logo">Oketch Mark</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="togglemenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-link">
-                   <li><a href="#about" onclick="togglemenu()">About</a></li>
-                   <li><a href="#experience" onclick="togglemenu()">Experience</a></li>
-                   <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
-                 <li><a href="#contacts" onclick="togglemenu()">Contact</a></li>
-                   
-                </div>
-            </div>
-</nav>  
-
-<section id="profile">
-            <div class="section__pic-container">
-                <img src="./assets/pictures/profile_pic.png" 
-                alt="Oketch Mark profile picture">
-            </div>
-           <div class="section__text">
-                <p class="section__text__p1">Hello, I'm</p>
-                <h1 class="title">Oketch Mark</h1>
-                <p class="section__text__p2">Frontend Developer</p>
-                    <div class="btn-container">
-                        <button
-                         class="btn btn-color-2" 
-                         onclick="window.open('./assets/Mark Oketch CV 2023-2024.pdf')">
-                            Download CV
-                        </button>
-                    
-                        <button
-                         class="btn btn-color-1" 
-                         onclick="location.href='./#contacts'">
-                            Contact Info
-                        </button>
-                    </div>
-
-                    <div id="socials-container">
-                        <img 
-                        src="./assets/pictures/linkedin.png" 
-                        alt="My Linkedin profile" class="icon"
-                        onclick="location.href='https://www.linkedin.com/in/oketchmarko45'"
-                        />
-                   
-                        <img 
-                        src="./assets/pictures/github.png" 
-                        alt="My github profile" class="icon"
-                        onclick="location.href='https://github.com/markoketch'"
-                        />
-                    
-                        <img src="./assets/pictures/whatsapp.png" 
-                        alt="My whatsapp number" class="icon"
-                        onclick="location.href='https://wa.me/message/VQBKPKMSXYJWM1'"
-                         />          
-
-                        <img src="./assets/pictures/facebook.png" 
-                        alt="My facebook profile" class="icon"
-                        onclick="location.href='https://www.facebook.com/oketchmarko45/'"
-                        /> 
-
-                        <img src="./assets/pictures/x.jpg" 
-                        alt="My x profile" class="icon"
-                        onclick="location.href='https://twitter.com/oketchmarko45'"
-                        /> 
-                    
-                    </div>
-            </div>
-</section>
-
-<section id="about">
-              <p class="section__text__p1">Get To Know More</p>
-              <h1 class="title">About Me</h1>
-              <div class="section-container">
-                <div class="section__pic-container">
-                    <img src="./assets/pictures/about-pic.jpg" 
-                    alt="profile picture"
-                    class="about-pic"
-                />
-                </div>
-                
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img src="./assets/pictures/experince.png"
-                            alt="experience icon"
-                            class="icon"
-                            />
-                            <h3>Experience</h3>
-                            <p>2+ years<br> Frontend Development</p>
-                        </div>
-                        <div class="details-container">
-                            <img src="./assets/pictures/education.png"
-                            alt="Education icon"
-                            class="icon"
-                            />
-                            <h3>Education</h3>
-                            <p>Business Information Technology Diploma<br> M.Sc.Masters Degree</p>
-                        </div>
-                    </div>
-                    <div class="text-container">
-                        <p>
-                            Passionate about staying up-to-date with the latest advancements in the technology industry, 
-                            I actively seek opportunities for professional development and continuous learning.
-                            I am excited to contribute my technical skills, enthusiasm, 
-                            and dedication to a forward-thinking organization that values innovation 
-                            and embraces the trans-formative power of technology.
-                        </p>
-                    </div>
-                </div>
-              </div>
-              <img src="./assets/pictures/arrow down.jpg"
-               alt="Arrow icon" class="icon arrow"
-               onclick="location.href='./#experience'">
-</section>
-
-<section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Experience</h1>
-            <div class="experience-details-container">
-               <div class="about-containers">
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>SASS</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>JavaSCript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>TypeScript</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Material UI</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                    </div>
-                    </div>
-                    <div class="details-container">       
-                     <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>PostgreSQL</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Node JS</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Express JS</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/pictures/checkmark.png"
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Git</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article>
-                       
-                    </div>
-                    </div>
-               </div>
-            </div>
-            <img src="./assets/pictures/arrow down.jpg"
-            alt="Arrow icon" class="icon arrow"
-            onclick="location.href='./#projects'">
-</section>
-
-<section id="projects">
-                <p class="section__text__p1">Brouse My Resent</p>
-                <h1 class="title">Projects</h1>
-                  <div class="experience-details-container">
-                    <div class="about-containers">
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                                  <img 
-                                  src="./assets/pictures/project 1.jpg"
-                                  alt="project 1"
-                                  class="project_img"
-                                  />
-                              <h2 class="experience-sub-title project-title">Project One</h2>
-                            <div class="btn-container">
-                               <button class="btn btn-color-2 project btn" onclick="location.
-                               href='https://github.com/'">
-                               Github
-                               </button>
-
-                                <button class="btn btn-color-2 project btn" onclick="location.
-                                href='https://github.com/'">
-                                Live Demo
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="details-container color-container">
-                       <div class="article-container">
-                           <img 
-                           src="./assets/pictures/project 2.jpg"
-                           alt="project 2"
-                           class="project_img"
-                           />
-                        <h2 class="experience-sub-title project-title">Project Two</h2>
-                       <div class="btn-container">
-                           <button class="btn btn-color-2 project btn" onclick="location.
-                              href='https://github.com/'">
-                              Github
-                           </button>
-
-                           <button class="btn btn-color-2 project btn" onclick="location.
-                             href='https://github.com/'">
-                             Live Demo
-                           </button>
-
-                       </div>
-                    </div>
-                </div>
-       
-            <div class="details-container color-container">
-                <div class="article-container">
-                      <img 
-                      src="./assets/pictures/project 3.jpg"
-                      alt="project 3"
-                      class="project_img"
-                      />
-                     <h2 class="experience-sub-title project-title">Project Three</h2>
-                    <div class="btn-container">
-                         <button class="btn btn-color-2 project btn" onclick="location.
-                         href='https://github.com/'">
-                         Github
-                        </button>
-
-                        <button class="btn btn-color-2 project btn"    onclick="location.
-                         href='https://github.com/'">
-                         Live Demo
-                         </button>
-
-                     </div>
-                 </div>
-            </div>
-        </div>
+  <!-- Profile Section -->
+  <section class="profile-section" style="display: flex; align-items: center; margin-bottom: 40px; position: relative;">
+    <div class="profile-image" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid #003366; margin-right: 30px;">
+      <img src="../Images/passport.jpg" alt="Ochieng Mark Oketch" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-              <img src="./assets/pictures/arrow down.jpg"
-               alt="Arrow icon" class="icon arrow"
-               onclick="location.href='./#contacts'"
-               >
-</section>
+    
+    <div style="flex: 1;">
+      <h1 style="margin: 0 0 5px 0; color: #003366; font-size: 28px;">Ochieng Mark Oketch</h1>
+      <p style="margin: 0 0 5px 0; font-size: 18px; color: #555;"><strong>Founder and CEO</strong></p>
+      <p style="margin: 0 0 15px 0; font-size: 16px; color: #666;">Markas Enterprise MKE</p>
+      
+      <div style="margin: 0 0 20px 0; display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <span style="display: flex; align-items: center;">
+          <i class="fas fa-envelope" style="color: #003366; margin-right: 5px;"></i> 
+          <a href="mailto:oketchmarko45@gmail.com" style="color: #0056b3; text-decoration: none;">
+            oketchmarko45@gmail.com
+          </a>
+        </span>
+        
+        <span style="color: #003366;">|</span>
+        
+        <span style="display: flex; align-items: center;">
+          <i class="fab fa-linkedin" style="color: #0077B5; margin-right: 5px;"></i> 
+          <a href="https://www.linkedin.com/in/oketchmarko45" target="_blank" style="color: #0077B5; text-decoration: none;">
+            LinkedIn Profile
+          </a>
+        </span>
+      </div>
+      
+      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <a href="https://drive.google.com/uc?export=download&id=10PALuPkHdU7TFobnMzRfd29PGbwlXut7" download style="display: inline-block; background-color: #003366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9';" 
+           onmouseout="this.style.transform='scale(1)'; this.style.opacity='1';">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        
+        <a href="../booking.html" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9';" 
+           onmouseout="this.style.transform='scale(1)'; this.style.opacity='1';">
+          <i class="fas fa-calendar-check"></i> Book Service
+        </a>
+      </div>
+    </div>
+  </section>
 
-<section id="contacts">
-<p class="section__text__p1">Get In Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-contact">
-                <div class="contact-info-container">
-                    <img src="./assets/pictures/email.png" alt="email icon" class="icon contact-icon"
-                    />
-                    <p>
-                        <a href="mailto:oketchmarko45@gmail.com">Oketchmarko45@gmail.com</a>
-                    </p>
-                </div>
-                <div class="contact-info-container">
-                    <img src="./assets/pictures/linkedin.png" alt="linkedin icon" class="icon contact-icon"
-                    />
-                    <p>
-                        <a href="https://www.linkedin.com/in/oketchmarko45">Linkedin</a>
-                    </p>
-                </div>
-            </div>  
+  <!-- About -->
+  <section style="margin-bottom: 30px;">
+    <h2 style="color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px;">About Me</h2>
+    <p style="line-height: 1.6;">I'm a passionate techie and storyteller who loves coding, crafting content, and connecting with canines. My mission is to blend technology and pet care to build unique solutions that make both people and pets happy.</p>
+  </section>
 
-        </section>
+  <!-- Skills -->
+  <section style="margin-bottom: 30px;">
+    <h2 style="color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px;">Skills</h2>
+    <ul style="padding-left: 20px; line-height: 1.6;">
+      <li style="margin-bottom: 8px;"><strong>Web Skills:</strong> HTML, CSS, JavaScript, WordPress</li>
+      <li style="margin-bottom: 8px;"><strong>Tools:</strong> GitHub, VS Code, Figma</li>
+      <li style="margin-bottom: 8px;"><strong>Writing:</strong> Blogging, Technical Writing, Storytelling</li>
+      <li style="margin-bottom: 8px;"><strong>Other:</strong> Dog handling, Communication, Teamwork</li>
+    </ul>
+  </section>
 
-<footer>
-            <nav>
-                <div class="nav-links-container">
-                    <ul class="nav-link">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contacts">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <p>Copyright &#169; 2024 Oketch Mark. All Rights Reserved.</p>
-</footer>
+  <!-- Projects -->
+  <section style="margin-bottom: 30px;">
+    <h2 style="color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px;">Projects</h2>
+    <ul style="padding-left: 20px; line-height: 1.6;">
+      <li style="margin-bottom: 8px;"><strong>Dog Care Booking Site:</strong> Built a simple HTML/CSS system for booking pet care services.</li>
+      <li style="margin-bottom: 8px;"><strong>Dev Blog:</strong> Published articles on coding and dog analogies via WordPress and Medium.</li>
+      <li style="margin-bottom: 8px;"><strong>Portfolio Website:</strong> This one-page site created with pure HTML and inline CSS!</li>
+    </ul>
+  </section>
+  
+  <!-- Services -->
+  <section style="margin-bottom: 30px;">
+    <h2 style="color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px;">Services</h2>
+    <ul style="padding-left: 20px; line-height: 1.6;">
+      <li style="margin-bottom: 8px;">Custom Website Development</li>
+      <li style="margin-bottom: 8px;">Blog Writing & Editing</li>
+      <li style="margin-bottom: 8px;">Dog Care Advice & Training Tips</li>
+      <li style="margin-bottom: 8px;">Cyber Services: Cyber Café Access, Printing, Photocopying, Scanning, CV Writing, Online Applications</li>
+    </ul>
+  </section>
+  
+  <!-- Contact -->
+  <section style="margin-bottom: 30px;">
+    <h2 style="color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px;">Contact Me</h2>
+    <div class="contact-item">
+      <i class="fas fa-envelope" style="color: #003366;"></i>
+      <span>Email: <a href="mailto:oketchmarko45@gmail.com" style="color: #0056b3; text-decoration: none;">oketchmarko45@gmail.com</a></span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone" style="color: #003366;"></i>
+      <span>Phone: <a href="tel:+254712711088" style="color: #0056b3; text-decoration: none;">+254 712 711 088</a></span>
+    </div>
+  </section>
 
-<script src="script.js"></script>
-     </body>
+  <!-- Social Media -->
+  <section style="margin-bottom: 30px;">
+    <h2 style="color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px;">Connect With Me</h2>
+    <div class="social-links">
+      <a href="https://facebook.com/oketchmarko45" target="_blank" style="background-color: #3b5998;">
+        <i class="fab fa-facebook-f"></i>&nbsp;Facebook
+      </a>
+      <a href="https://wa.me/254712711088" target="_blank" style="background-color: #25D366;">
+        <i class="fab fa-whatsapp"></i>&nbsp;WhatsApp
+      </a>
+      <a href="https://x.com/oketchmarko45" target="_blank" style="background-color: #000000;">
+        <i class="fab fa-x-twitter"></i>&nbsp;X
+      </a>
+      <a href="https://instagram.com/oketchmarko45" target="_blank" style="background-color: #E1306C;">
+        <i class="fab fa-instagram"></i>&nbsp;Instagram
+      </a>
+      <a href="https://tiktok.com/@oketchmarko45" target="_blank" style="background-color: #010101;">
+        <i class="fab fa-tiktok"></i>&nbsp;TikTok
+      </a>
+      <a href="https://github.com/oketchmarko45" target="_blank" style="background-color: #333;">
+        <i class="fab fa-github"></i>&nbsp;GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/oketchmarko45" target="_blank" style="background-color: #0077B5;">
+        <i class="fab fa-linkedin"></i>&nbsp;LinkedIn
+      </a>
+      <a href="https://www.youtube.com/@oketchmarko45" target="_blank" style="background-color: #FF0000;">
+        <i class="fab fa-youtube"></i>&nbsp;YouTube
+      </a>
+      <a href="https://oketchmarko45.wordpress.com" target="_blank" style="background-color: #21759B;">
+        <i class="fab fa-wordpress"></i>&nbsp;WordPress
+      </a>
+    </div>
+  </section>
+
+</div>
+  
+<script>
+  // Exit X button functionality
+  const exitX = document.querySelector('.animated-x');
+  
+  // Make X move with scroll
+  function updateXPosition() {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.scrollHeight;
+    const maxScroll = documentHeight - windowHeight;
+    const scrollPercentage = scrollPosition / maxScroll;
+    
+    // Calculate positions (20px from right always, moving vertically)
+    const rightPosition = 20;
+    const startTop = 20;
+    const endTop = windowHeight - 60; // 60px from bottom
+    
+    // Current position
+    const currentTop = startTop + (endTop - startTop) * scrollPercentage;
+    
+    // Apply styles
+    exitX.style.right = `${rightPosition}px`;
+    exitX.style.top = `${currentTop}px`;
+  }
+  
+  // Click handler to return to index.html
+  exitX.addEventListener('click', function() {
+    window.location.href = '../index.html';
+  });
+  
+  // Initialize position
+  updateXPosition();
+  
+  // Update on scroll and resize
+  window.addEventListener('scroll', updateXPosition);
+  window.addEventListener('resize', updateXPosition);
+  
+  // Add hover effect with JavaScript for better compatibility
+  exitX.addEventListener('mouseenter', function() {
+    this.style.opacity = '1';
+    this.style.transform = 'scale(1.1)';
+  });
+  
+  exitX.addEventListener('mouseleave', function() {
+    this.style.opacity = '0.7';
+    this.style.transform = 'scale(1)';
+  });
+</script>
+  
+</body>
 </html>
